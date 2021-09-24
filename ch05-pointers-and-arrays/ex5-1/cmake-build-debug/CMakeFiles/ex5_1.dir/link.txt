@@ -1,0 +1,1 @@
+/usr/bin/clang -g CMakeFiles/ex5_1.dir/bin/main.c.o CMakeFiles/ex5_1.dir/src/getint.c.o -o ex5_1 

@@ -1,0 +1,1 @@
+/usr/bin/clang -g CMakeFiles/getint.dir/bin/main.c.o CMakeFiles/getint.dir/src/getint.c.o -o getint 
