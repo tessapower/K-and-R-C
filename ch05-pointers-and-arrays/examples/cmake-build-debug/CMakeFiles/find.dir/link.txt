@@ -1,0 +1,1 @@
+/usr/bin/clang -g CMakeFiles/find.dir/find.c.o -o find 

@@ -1,0 +1,1 @@
+/usr/bin/clang -g CMakeFiles/sort.dir/sort.c.o -o sort 
