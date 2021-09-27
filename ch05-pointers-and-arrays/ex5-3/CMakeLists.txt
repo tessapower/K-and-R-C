@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
-project(strCat C)
+project(strCat VERSION 0.0.1)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(include)
+include(FetchContent)
 
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     set(CMAKE_CXX_EXTENSIONS OFF)
@@ -15,4 +15,4 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     add_subdirectory(tests)
 endif()
 
-add_library(str_cat include/str_cat.h src/str_cat.c)
+add_subdirectory(src)

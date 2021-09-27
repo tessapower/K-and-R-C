@@ -1,5 +1,3 @@
-include(FetchContent)
-
 FetchContent_Declare(
         googletest
         GIT_REPOSITORY https://github.com/google/googletest.git
@@ -12,6 +10,8 @@ if(NOT googletest_POPULATED)
     add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
 endif()
 
-add_executable(tests tests.c)
+add_executable(tests tests.cpp)
 
 target_link_libraries(tests PRIVATE str_cat gtest gtest_main)
+
+add_test(NAME tests COMMAND tests)
