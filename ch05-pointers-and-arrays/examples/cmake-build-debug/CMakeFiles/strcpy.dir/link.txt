@@ -1,1 +1,0 @@
-/usr/bin/clang -g CMakeFiles/strcpy.dir/strcpy.c.o -o strcpy 

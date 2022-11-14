@@ -1,1 +1,0 @@
-/usr/bin/clang -g CMakeFiles/find_with_params.dir/find_with_params.c.o -o find_with_params 

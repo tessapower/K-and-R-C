@@ -1,7 +1,0 @@
-/home/tessa/Developer/K-and-R/ch05-pointers-and-arrays/examples/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/tessa/Developer/K-and-R/ch05-pointers-and-arrays/examples/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/tessa/Developer/K-and-R/ch05-pointers-and-arrays/examples/cmake-build-debug/CMakeFiles/echo.dir
-/home/tessa/Developer/K-and-R/ch05-pointers-and-arrays/examples/cmake-build-debug/CMakeFiles/find.dir
-/home/tessa/Developer/K-and-R/ch05-pointers-and-arrays/examples/cmake-build-debug/CMakeFiles/strcpy.dir
-/home/tessa/Developer/K-and-R/ch05-pointers-and-arrays/examples/cmake-build-debug/CMakeFiles/find_with_params.dir
-/home/tessa/Developer/K-and-R/ch05-pointers-and-arrays/examples/cmake-build-debug/CMakeFiles/sort.dir
