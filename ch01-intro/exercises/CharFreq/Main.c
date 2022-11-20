@@ -68,15 +68,15 @@ int main() {
   }
 
   printf("\\t |");
-  if (space > 0) {
-    printf("%0*d\n", space, 0);
+  if (tab > 0) {
+    printf("%0*d\n", tab, 0);
   } else {
     printf("\n");
   }
 
   printf("\\n |");
-  if (space > 0) {
-    printf("%0*d\n", space, 0);
+  if (newline > 0) {
+    printf("%0*d\n", newline, 0);
   } else {
     printf("\n");
   }

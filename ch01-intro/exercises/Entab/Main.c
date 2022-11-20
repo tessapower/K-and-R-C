@@ -48,7 +48,7 @@ void entab(char s[]) {
 
   int i = 0;
   int j = 0;
-  while (s[i] != '\0' && i < MAX_LINE - 1 && j < MAX_LINE - 1) {
+  while (s[i] != '\0' && i < MAX_LINE && j < MAX_LINE - 1) {
     // move along the string and copy chars until we hit a space
     if (s[i] == ' ') {
       int nTabs = 0;
