@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8616d25b-9490-4298-8b2b-5c2e24309fcc}</ProjectGuid>
+    <ProjectGuid>{4534ba12-4353-4351-9129-c06488ee58b8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
@@ -45,8 +45,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Fold\Fold.vcxproj">
-      <Project>{48f79ce8-252c-46ea-8bf4-1052b4e21e26}</Project>
+    <ProjectReference Include="..\Any\Any.vcxproj">
+      <Project>{2f248789-690f-4042-b21f-9a3db3cab43c}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -66,12 +66,12 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\..\Fold;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\..\Any;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>C:\Users\tessa\Developer\K-and-R\ch01-intro\exercises\Fold\x64\Debug\StrUtils.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\tessa\Developer\K-and-R\ch02-types-operators-and-expressions\exercises\Any\x64\Debug\StrUtils.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -83,12 +83,12 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\..\Fold;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\..\Any;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>C:\Users\tessa\Developer\K-and-R\ch01-intro\exercises\Fold\x64\Debug\StrUtils.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\tessa\Developer\K-and-R\ch02-types-operators-and-expressions\exercises\Any\x64\Debug\StrUtils.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -99,14 +99,14 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\..\Fold;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\..\Any;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>C:\Users\tessa\Developer\K-and-R\ch01-intro\exercises\Fold\x64\Debug\StrUtils.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\tessa\Developer\K-and-R\ch02-types-operators-and-expressions\exercises\Any\x64\Debug\StrUtils.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -117,14 +117,14 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\..\Fold;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\..\Any;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>C:\Users\tessa\Developer\K-and-R\ch01-intro\exercises\Fold\x64\Debug\StrUtils.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\tessa\Developer\K-and-R\ch02-types-operators-and-expressions\exercises\Any\x64\Debug\StrUtils.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
