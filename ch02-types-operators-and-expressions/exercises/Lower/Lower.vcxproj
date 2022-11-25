@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{58d02460-30d1-4c26-89ad-e297657267e6}</ProjectGuid>
-    <RootNamespace>RightRot</RootNamespace>
+    <ProjectGuid>{58fcc380-1a2c-4305-9ad9-f6dc88669931}</ProjectGuid>
+    <RootNamespace>Lower</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,14 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bittwiddling.c">
+    <ClCompile Include="main.c" />
+    <ClCompile Include="strutils.c">
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bittwiddling.h" />
+    <ClInclude Include="strutils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
