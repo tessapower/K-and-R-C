@@ -1,6 +1,6 @@
-#include "pch.h"
+#include "gtest/gtest.h"
 extern "C" {
-  #include "StrUtils.h"
+  #include "strutils.h"
 }
 
 TEST(squeeze, empty) {

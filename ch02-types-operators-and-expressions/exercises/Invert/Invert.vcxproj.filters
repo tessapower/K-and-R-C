@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.c">
+    <ClCompile Include="bittwiddling.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BitTwiddling.c">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BitTwiddling.h">
+    <ClInclude Include="bittwiddling.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

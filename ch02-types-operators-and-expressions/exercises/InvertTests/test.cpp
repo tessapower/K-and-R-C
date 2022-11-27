@@ -1,6 +1,6 @@
-#include "pch.h"
+#include "gtest/gtest.h"
 extern "C" {
-  #include "BitTwiddling.h"
+  #include "bittwiddling.h"
 }
 
 TEST(invert, invertNothing) {
