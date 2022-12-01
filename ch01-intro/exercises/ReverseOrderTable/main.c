@@ -10,8 +10,8 @@ int main() {
 
   printf(" Celsius | Fahrenheit\n");
   printf("---------+------------\n");
-  for (float celsius = upper; celsius >= lower; celsius -= step) {
-    printf("%8.0f | %11.1f\n", celsius, (9.0 / 5.0) * (celsius + 32.0));
+  for (int celsius = upper; celsius >= lower; celsius -= step) {
+    printf("%8i | %11.1f\n", celsius, (9.0f / 5.0f) * (celsius + 32.0f));
   }
 
   return 0;

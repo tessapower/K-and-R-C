@@ -8,14 +8,14 @@ int main() {
   const int upper = 300;
   const int step = 20;
 
-  float celsius = lower;
+  int celsius = lower;
   float fahr;
 
   printf(" Celsius | Fahrenheit\n");
   printf("---------+------------\n");
   while (celsius <= upper) {
-    fahr = (9.0 / 5.0) * (celsius + 32.0);
-    printf("%8.0f | %11.1f\n", celsius, fahr);
+    fahr = (9.0f / 5.0f) * (celsius + 32.0f);
+    printf("%8i | %11.1f\n", celsius, fahr);
     celsius += step;
   }
 
