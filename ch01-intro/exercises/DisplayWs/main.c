@@ -5,7 +5,6 @@
 //  tabs and backspaces visible in an unambiguous way.
 int main() {
   int c;
-
   while ((c = getchar()) != EOF) {
     if (c == '\b') {
       printf("\\b");

@@ -4,7 +4,6 @@
 //   each string of one or more blanks by a single blank.
 int main() {
   int c;
-
   while ((c = getchar()) != EOF) {
     if (c == '\n' || c == '\t' || c == ' ') {
       // collect the blanks of this type
