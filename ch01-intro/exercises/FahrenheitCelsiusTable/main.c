@@ -4,9 +4,10 @@
 // Exercise 1-3: Modify the temperature conversion program to print a heading
 //   above the table.
 int main() {
-  int lower = 0;
-  int upper = 300;
-  int step = 20;
+  const int lower = 0;
+  const int upper = 300;
+  const int step = 20;
+
   float fahr = lower;
   float celsius;
 

@@ -4,9 +4,10 @@
 // Exercise 1-4: Write a program to print the corresponding Celsius to
 //   Fahrenheit table.
 int main() {
-  int lower = 0;
-  int upper = 300;
-  int step = 20;
+  const int lower = 0;
+  const int upper = 300;
+  const int step = 20;
+
   float celsius = lower;
   float fahr;
 

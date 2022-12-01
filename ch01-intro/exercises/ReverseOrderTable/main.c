@@ -4,9 +4,9 @@
 // Exercise 1-5: Modify the temperature conversion program to print the table
 //   in reverse order, that is from 300 degrees to 0.
 int main() {
-  int lower = 0;
-  int upper = 300;
-  int step = 20;
+  const int lower = 0;
+  const int upper = 300;
+  const int step = 20;
 
   printf(" Celsius | Fahrenheit\n");
   printf("---------+------------\n");
