@@ -1,12 +1,11 @@
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <profileapi.h>
 
 #include "binsearch.h"
 
-#define NUM_TESTS 150000
+#define NUM_TESTS 100000
 
 LONGLONG exectime(int (*search)(int x, int v[], int n));
 
@@ -26,7 +25,7 @@ LONGLONG exectime(int (*search)(int x, int v[], int n)) {
     nums[i] = i;
   }
 
-  LARGE_INTEGER start, end, elapsedms;
+  LARGE_INTEGER start, end;
   LARGE_INTEGER freq;
 
   QueryPerformanceFrequency(&freq);
@@ -39,17 +38,4 @@ LONGLONG exectime(int (*search)(int x, int v[], int n)) {
   QueryPerformanceCounter(&end);
 
   return end.QuadPart - start.QuadPart;
-
-  //elapsedms.QuadPart = end.QuadPart - start.QuadPart;
-
-  //
-  // We now have the elapsed number of ticks, along with the
-  // number of ticks-per-second. We use these values
-  // to convert to the number of elapsed microseconds.
-  // To guard against loss-of-precision, we convert
-  // to microseconds *before* dividing by ticks-per-second.
-  //
-
-  //elapsedms.QuadPart *= 1000000;
-  //elapsedms.QuadPart /= freq.QuadPart;
 }

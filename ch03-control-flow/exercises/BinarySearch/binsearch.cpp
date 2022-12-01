@@ -26,15 +26,15 @@ int binsearch1(int x, int v[], int n) {
 int binsearch2(int x, int v[], int n) {
   int low = 0;
   int high = n - 1;
-  int mid = 0;
+  int mid = (low + high) / 2;
 
   while (low <= high && x != v[mid]) {
-    mid = (low + high) / 2;
-
     if (x < v[mid])
       high = mid - 1;
     else
       low = mid + 1;
+
+    mid = (low + high) / 2;
   }
 
   return (v[mid] == x) ? mid : - 1;
