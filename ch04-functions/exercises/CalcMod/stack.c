@@ -5,18 +5,28 @@
 int sp = 0;
 double val[MAXVAL];
 
-void push(double d) {
-  if (sp < MAXVAL)
+bool push(double d) {
+  if (sp < MAXVAL) {
     val[sp++] = d;
-  else 
-    printf("error: stack full, can't push %g\n", d);
+
+    return true;
+  }
+
+  printf("error: stack full, can't push %g\n", d);
+
+  return false;
 }
 
 double pop(void) {
-  if (sp > 0)
-    return val[--sp];
-  else {
-    printf("error: stack empty\n");
-    return 0.0;
-  }
+  if (sp > 0) return val[--sp];
+
+  printf("error: stack empty\n");
+
+  return 0.0;
+}
+
+void clear(void) {
+  // We simulate clearing the stack by simply setting the stack position
+  // back to the beginning and writing over any previous values.
+  sp = 0;
 }

@@ -22,6 +22,7 @@
     <ClCompile Include="getch.c" />
     <ClCompile Include="getop.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="run.c" />
     <ClCompile Include="stack.c" />
   </ItemGroup>
   <ItemGroup>

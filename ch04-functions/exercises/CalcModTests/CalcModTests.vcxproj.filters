@@ -15,24 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
+    <ClCompile Include="CalcModTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stack.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="getch.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="getop.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="run.c">
+    <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="calc.h">
+    <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
