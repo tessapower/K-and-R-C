@@ -8,18 +8,18 @@ int main() {
   int lower = 0;
   int upper = 300;
   int step = 20;
-  float celsius = lower;
+  int celsius = lower;
   float fahr;
 
   printf(" Celsius | Fahrenheit\n");
   printf("---------+------------\n");
   while (celsius <= upper) {
     fahr = celsiustofahr(celsius);
-    printf("%8.0f | %11.1f\n", celsius, fahr);
+    printf("%8i | %11.1f\n", celsius, fahr);
     celsius += step;
   }
 
   return 0;
 }
 
-float celsiustofahr(int celsius) { return (9.0 / 5.0) * (celsius + 32.0); }
+float celsiustofahr(int celsius) { return (9.0f / 5.0f) * (celsius + 32.0f); }

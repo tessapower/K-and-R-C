@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 
+#include <string>
+
 extern "C" {
   #include "strutils.h"
 }
@@ -15,8 +17,8 @@ TEST_CLASS(EscapeTests) {
     char s[10];
     escape(s, t);
 
-    Assert::AreEqual(t, "");
-    Assert::AreEqual(s, "");
+    Assert::AreEqual(std::string{t}, std::string{""});
+    Assert::AreEqual(std::string{s}, std::string{""});
   }
 
   TEST_METHOD(escapeString) {
@@ -24,8 +26,8 @@ TEST_CLASS(EscapeTests) {
     char s[100];
     escape(s, t);
 
-    Assert::AreEqual(s, "Hello,\\aworld\\t!\\vHere\\'s a\\bstring with lots of "
-                     "\\\"escaped chars\\\"\\r\\n");
+    Assert::AreEqual(std::string{s}, std::string{"Hello,\\aworld\\t!\\vHere\\'s a\\bstring with lots of "
+      "\\\"escaped chars\\\"\\r\\n"});
   }
 
   TEST_METHOD(escapeNoEscapedChars) {
@@ -33,7 +35,7 @@ TEST_CLASS(EscapeTests) {
     char s[100];
     escape(s, t);
 
-    Assert::AreEqual(s, "hello, world! this string has no escaped characters");
+    Assert::AreEqual(std::string{s}, std::string{"hello, world! this string has no escaped characters"});
   }
 
   TEST_METHOD(unescapeEmptyString) {
@@ -41,8 +43,8 @@ TEST_CLASS(EscapeTests) {
     char s[10];
     unescape(s, t);
 
-    Assert::AreEqual(t, "");
-    Assert::AreEqual(s, "");
+    Assert::AreEqual(std::string{t}, std::string{""});
+    Assert::AreEqual(std::string{s}, std::string{""});
   }
 
   TEST_METHOD(unescapeNoEscapedChars) {
@@ -50,7 +52,7 @@ TEST_CLASS(EscapeTests) {
     char s[100];
     unescape(s, t);
 
-    Assert::AreEqual(s, "hello, world! this string has no unescaped characters");
+    Assert::AreEqual(std::string{s}, std::string{"hello, world! this string has no unescaped characters"});
   }
 
   TEST_METHOD(unescapeString) {
@@ -62,7 +64,7 @@ TEST_CLASS(EscapeTests) {
         "Hello,\aworld\t!\vHere\'s a\bstring with lots of \"escaped "
         "chars\"\r\n";
 
-    Assert::AreEqual(s, expected);
+    Assert::AreEqual(std::string{s}, std::string{expected});
   }
   };
 }
