@@ -33,7 +33,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="InvertTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Invert\Invert.vcxproj">
