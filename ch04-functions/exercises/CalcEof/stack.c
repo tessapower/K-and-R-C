@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include "calc.h"
+
+#define MAXVAL 100
+int sp = 0;
+double val[MAXVAL];
+
+bool push(double d) {
+  if (sp < MAXVAL) {
+    val[sp++] = d;
+
+    return true;
+  }
+
+  return false;
+}
+
+double pop(void) {
+  if (sp > 0) return val[--sp];
+
+  printf("error: stack empty\n");
+
+  return 0.0;
+}
+
+double peek(void) {
+  if (sp > 0) return val[sp - 1];
+
+  printf("error: stack empty\n");
+
+  return 0.0;
+}
+
+bool swaptop(void) {
+  if (sp > 1) {
+    const double tmp = val[sp - 1];
+    val[sp - 1] = val[sp - 2];
+    val[sp - 2] = tmp;
+
+    return true;
+  }
+
+  return false;
+}
+
+bool dup(void) {
+  if (sp > 0 && sp < MAXVAL) {
+    push(val[sp - 1]);
+
+    return true;
+  }
+
+  return false;
+}
+
+void clear(void) {
+  // We simulate clearing the stack by simply setting the stack position
+  // back to the beginning and writing over any previous values.
+  sp = 0;
+}
+

@@ -143,6 +143,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CalcSinglePushback", "ch04-
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CalcSinglePushbackTests", "ch04-functions\exercises\CalcSinglePushbackTests\CalcSinglePushbackTests.vcxproj", "{331D3356-3372-4103-9F88-2F2E991A1551}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CalcEof", "ch04-functions\exercises\CalcEof\CalcEof.vcxproj", "{77A786C3-F339-4B26-B955-8ADBE3051C64}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CalcEofTests", "ch04-functions\exercises\CalcEofTests\CalcEofTests.vcxproj", "{09D97B29-BA13-423A-81C3-1CB228C4CF08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -711,6 +715,22 @@ Global
 		{331D3356-3372-4103-9F88-2F2E991A1551}.Release|x64.Build.0 = Release|x64
 		{331D3356-3372-4103-9F88-2F2E991A1551}.Release|x86.ActiveCfg = Release|Win32
 		{331D3356-3372-4103-9F88-2F2E991A1551}.Release|x86.Build.0 = Release|Win32
+		{77A786C3-F339-4B26-B955-8ADBE3051C64}.Debug|x64.ActiveCfg = Debug|x64
+		{77A786C3-F339-4B26-B955-8ADBE3051C64}.Debug|x64.Build.0 = Debug|x64
+		{77A786C3-F339-4B26-B955-8ADBE3051C64}.Debug|x86.ActiveCfg = Debug|Win32
+		{77A786C3-F339-4B26-B955-8ADBE3051C64}.Debug|x86.Build.0 = Debug|Win32
+		{77A786C3-F339-4B26-B955-8ADBE3051C64}.Release|x64.ActiveCfg = Release|x64
+		{77A786C3-F339-4B26-B955-8ADBE3051C64}.Release|x64.Build.0 = Release|x64
+		{77A786C3-F339-4B26-B955-8ADBE3051C64}.Release|x86.ActiveCfg = Release|Win32
+		{77A786C3-F339-4B26-B955-8ADBE3051C64}.Release|x86.Build.0 = Release|Win32
+		{09D97B29-BA13-423A-81C3-1CB228C4CF08}.Debug|x64.ActiveCfg = Debug|x64
+		{09D97B29-BA13-423A-81C3-1CB228C4CF08}.Debug|x64.Build.0 = Debug|x64
+		{09D97B29-BA13-423A-81C3-1CB228C4CF08}.Debug|x86.ActiveCfg = Debug|Win32
+		{09D97B29-BA13-423A-81C3-1CB228C4CF08}.Debug|x86.Build.0 = Debug|Win32
+		{09D97B29-BA13-423A-81C3-1CB228C4CF08}.Release|x64.ActiveCfg = Release|x64
+		{09D97B29-BA13-423A-81C3-1CB228C4CF08}.Release|x64.Build.0 = Release|x64
+		{09D97B29-BA13-423A-81C3-1CB228C4CF08}.Release|x86.ActiveCfg = Release|Win32
+		{09D97B29-BA13-423A-81C3-1CB228C4CF08}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
