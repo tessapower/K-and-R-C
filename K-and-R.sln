@@ -173,6 +173,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StrCat", "ch05-pointers-and
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StrCatTests", "ch05-pointers-and-arrays\exercises\StrCatTests\StrCatTests.vcxproj", "{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StrEnd", "ch05-pointers-and-arrays\exercises\StrEnd\StrEnd.vcxproj", "{23C234C5-8A16-4245-ADA3-64A0B7BE84B3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StrEndTests", "ch05-pointers-and-arrays\exercises\StrEndTests\StrEndTests.vcxproj", "{FA90F0FA-CC19-4EAA-AE1B-90718A729B32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -845,6 +849,14 @@ Global
 		{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}.Release|x64.Build.0 = Release|x64
 		{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}.Release|x86.ActiveCfg = Release|Win32
 		{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}.Release|x86.Build.0 = Release|Win32
+		{23C234C5-8A16-4245-ADA3-64A0B7BE84B3}.Debug|x64.ActiveCfg = Debug|x64
+		{23C234C5-8A16-4245-ADA3-64A0B7BE84B3}.Debug|x64.Build.0 = Debug|x64
+		{23C234C5-8A16-4245-ADA3-64A0B7BE84B3}.Debug|x86.ActiveCfg = Debug|Win32
+		{23C234C5-8A16-4245-ADA3-64A0B7BE84B3}.Debug|x86.Build.0 = Debug|Win32
+		{23C234C5-8A16-4245-ADA3-64A0B7BE84B3}.Release|x64.ActiveCfg = Release|x64
+		{23C234C5-8A16-4245-ADA3-64A0B7BE84B3}.Release|x64.Build.0 = Release|x64
+		{23C234C5-8A16-4245-ADA3-64A0B7BE84B3}.Release|x86.ActiveCfg = Release|Win32
+		{23C234C5-8A16-4245-ADA3-64A0B7BE84B3}.Release|x86.Build.0 = Release|Win32
 		{FA90F0FA-CC19-4EAA-AE1B-90718A729B32}.Debug|x64.ActiveCfg = Debug|x64
 		{FA90F0FA-CC19-4EAA-AE1B-90718A729B32}.Debug|x64.Build.0 = Debug|x64
 		{FA90F0FA-CC19-4EAA-AE1B-90718A729B32}.Debug|x86.ActiveCfg = Debug|Win32
