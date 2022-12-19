@@ -169,6 +169,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GetFloat", "ch05-pointers-a
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GetFloatTests", "ch05-pointers-and-arrays\exercises\GetFloatTests\GetFloatTests.vcxproj", "{4E9CFCB7-14F0-4E04-8B74-4C61FAB9BE6D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StrCat", "ch05-pointers-and-arrays\exercises\StrCat\StrCat.vcxproj", "{BFF950C7-5656-4C07-94C6-8C0FCAFE5BF4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StrCatTests", "ch05-pointers-and-arrays\exercises\StrCatTests\StrCatTests.vcxproj", "{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -825,6 +829,22 @@ Global
 		{11CD14AA-2BC4-4F91-8A51-AF4E17A78CCE}.Release|x64.Build.0 = Release|x64
 		{11CD14AA-2BC4-4F91-8A51-AF4E17A78CCE}.Release|x86.ActiveCfg = Release|Win32
 		{11CD14AA-2BC4-4F91-8A51-AF4E17A78CCE}.Release|x86.Build.0 = Release|Win32
+		{BFF950C7-5656-4C07-94C6-8C0FCAFE5BF4}.Debug|x64.ActiveCfg = Debug|x64
+		{BFF950C7-5656-4C07-94C6-8C0FCAFE5BF4}.Debug|x64.Build.0 = Debug|x64
+		{BFF950C7-5656-4C07-94C6-8C0FCAFE5BF4}.Debug|x86.ActiveCfg = Debug|Win32
+		{BFF950C7-5656-4C07-94C6-8C0FCAFE5BF4}.Debug|x86.Build.0 = Debug|Win32
+		{BFF950C7-5656-4C07-94C6-8C0FCAFE5BF4}.Release|x64.ActiveCfg = Release|x64
+		{BFF950C7-5656-4C07-94C6-8C0FCAFE5BF4}.Release|x64.Build.0 = Release|x64
+		{BFF950C7-5656-4C07-94C6-8C0FCAFE5BF4}.Release|x86.ActiveCfg = Release|Win32
+		{BFF950C7-5656-4C07-94C6-8C0FCAFE5BF4}.Release|x86.Build.0 = Release|Win32
+		{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}.Debug|x64.ActiveCfg = Debug|x64
+		{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}.Debug|x64.Build.0 = Debug|x64
+		{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}.Debug|x86.ActiveCfg = Debug|Win32
+		{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}.Debug|x86.Build.0 = Debug|Win32
+		{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}.Release|x64.ActiveCfg = Release|x64
+		{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}.Release|x64.Build.0 = Release|x64
+		{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}.Release|x86.ActiveCfg = Release|Win32
+		{A210CCB3-63FF-4A79-9DBE-59C93ABF1F70}.Release|x86.Build.0 = Release|Win32
 		{FA90F0FA-CC19-4EAA-AE1B-90718A729B32}.Debug|x64.ActiveCfg = Debug|x64
 		{FA90F0FA-CC19-4EAA-AE1B-90718A729B32}.Debug|x64.Build.0 = Debug|x64
 		{FA90F0FA-CC19-4EAA-AE1B-90718A729B32}.Debug|x86.ActiveCfg = Debug|Win32
