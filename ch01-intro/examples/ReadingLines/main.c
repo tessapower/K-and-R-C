@@ -29,7 +29,7 @@ int main() {
 
 // Reads a line into s, returns the length
 int getline(char s[], int lim) {
-  int c;
+  int c = 0;
   // Declare i outside of loop so we can return the length
   int i;
   for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
