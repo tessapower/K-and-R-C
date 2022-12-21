@@ -189,6 +189,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DateErrorChecks", "ch05-poi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DateErrorChecksTests", "ch05-pointers-and-arrays\exercises\DateErrorChecksTests\DateErrorChecksTests.vcxproj", "{56142875-2878-4442-8C61-4D240FF46BAB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DatePointersTests", "ch05-pointers-and-arrays\exercises\DatePointersTests\DatePointersTests.vcxproj", "{29FC37D1-5854-46DC-BD99-E3B318217ADB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DatePointers", "ch05-pointers-and-arrays\exercises\DatePointers\DatePointers.vcxproj", "{3163107C-E7B7-4309-9891-F01AC3AF15BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -941,6 +945,22 @@ Global
 		{56142875-2878-4442-8C61-4D240FF46BAB}.Release|x64.Build.0 = Release|x64
 		{56142875-2878-4442-8C61-4D240FF46BAB}.Release|x86.ActiveCfg = Release|Win32
 		{56142875-2878-4442-8C61-4D240FF46BAB}.Release|x86.Build.0 = Release|Win32
+		{29FC37D1-5854-46DC-BD99-E3B318217ADB}.Debug|x64.ActiveCfg = Debug|x64
+		{29FC37D1-5854-46DC-BD99-E3B318217ADB}.Debug|x64.Build.0 = Debug|x64
+		{29FC37D1-5854-46DC-BD99-E3B318217ADB}.Debug|x86.ActiveCfg = Debug|Win32
+		{29FC37D1-5854-46DC-BD99-E3B318217ADB}.Debug|x86.Build.0 = Debug|Win32
+		{29FC37D1-5854-46DC-BD99-E3B318217ADB}.Release|x64.ActiveCfg = Release|x64
+		{29FC37D1-5854-46DC-BD99-E3B318217ADB}.Release|x64.Build.0 = Release|x64
+		{29FC37D1-5854-46DC-BD99-E3B318217ADB}.Release|x86.ActiveCfg = Release|Win32
+		{29FC37D1-5854-46DC-BD99-E3B318217ADB}.Release|x86.Build.0 = Release|Win32
+		{3163107C-E7B7-4309-9891-F01AC3AF15BC}.Debug|x64.ActiveCfg = Debug|x64
+		{3163107C-E7B7-4309-9891-F01AC3AF15BC}.Debug|x64.Build.0 = Debug|x64
+		{3163107C-E7B7-4309-9891-F01AC3AF15BC}.Debug|x86.ActiveCfg = Debug|Win32
+		{3163107C-E7B7-4309-9891-F01AC3AF15BC}.Debug|x86.Build.0 = Debug|Win32
+		{3163107C-E7B7-4309-9891-F01AC3AF15BC}.Release|x64.ActiveCfg = Release|x64
+		{3163107C-E7B7-4309-9891-F01AC3AF15BC}.Release|x64.Build.0 = Release|x64
+		{3163107C-E7B7-4309-9891-F01AC3AF15BC}.Release|x86.ActiveCfg = Release|Win32
+		{3163107C-E7B7-4309-9891-F01AC3AF15BC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
