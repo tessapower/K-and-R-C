@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
 
   printf("> ");
   char** lines = NULL;
-  int nread = readlines(lines, nlines, getchar);
+  int nread = readlines(&lines, nlines, getchar);
 
   if (lines != NULL) {
     printf("\nOutput:\n");

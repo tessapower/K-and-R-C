@@ -14,7 +14,7 @@ extern "C" {
  * @brief Reads the given number of lines of input. Returns NULL if no lines
  *  were read.
 */
-int readlines(char** lines, const int nlines, int (*getc)(void));
+int readlines(char*** lines, const int nlines, int (*getc)(void));
 
 /**
  * @brief Reads a line and returns a pointer to it.
