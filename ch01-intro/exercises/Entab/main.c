@@ -26,7 +26,7 @@ int main() {
 
 // Reads a line into s, returns the length
 int getline(char s[], const int lim) {
-  int c;
+  int c = 0;
   // Declare i outside of loop so we can return the length
   int i;
   for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
@@ -48,33 +48,39 @@ void entab(char s[]) {
 
   int i = 0;
   int j = 0;
-  while (s[i] != '\0' && i < MAX_LINE && j < MAX_LINE - 1) {
-    // move along the string and copy chars until we hit a space
-    if (s[i] == ' ') {
-      int nTabs = 0;
-      int nBlanks = 0;
-      // look forward until we find the next non-space char
-      int start = i;
-      while (s[i] == ' ' && i < MAX_LINE - 1) {
-        nBlanks++;
-        i++;
-        // if we crossed over a tab stop
-        if (i % TAB_WIDTH == 0) {
-          nBlanks = 0;
-          nTabs++;
-        }
-      }
 
-      for (int k = 0; k < nTabs; ++k) tmp[j++] = '_';
-      for (int k = 0; k < nBlanks; ++k) tmp[j++] = '.';
+  int ntabs = 0;
+  int nblanks = 0;
+  while (s[i] != '\0' && i < MAX_LINE && j < MAX_LINE - 1) {
+    // Move along the string, copy chars until we hit a blank
+    if (s[i] == ' ') {
+      // Collect blanks until we get enough to need a tab
+      if (i % TAB_WIDTH == 0) {
+        nblanks = 0;
+        ntabs++;
+      } else {
+        nblanks++;
+      }
     } else {
+      // If we have been collecting blanks and tabs, add them before adding
+      // a new character, making sure we don't go over the max line length.
+      // Does nothing if ntabs and nblanks is 0.
+      while (ntabs-- > 0 && j < MAX_LINE - 1) tmp[j++] = '\t';
+      while (nblanks-- > 0 && j < MAX_LINE - 1) tmp[j++] = ' ';
+      // Reset tabs & blanks
+      ntabs = 0;
+      nblanks = 0;
+
+      // Add the character
       tmp[j++] = s[i];
       i++;
     }
   }
 
+  // Add terminating character
   tmp[j] = '\0';
 
+  // Copy our tmp string back into s
   copy(s, tmp);
 }
 
