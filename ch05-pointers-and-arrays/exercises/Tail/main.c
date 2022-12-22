@@ -1,3 +1,4 @@
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -35,7 +36,9 @@ int main(int argc, char** argv) {
 
   printf("> ");
   char** lines = NULL;
-  int nread = readlines(&lines, nlines, getchar);
+  assert((lines = malloc(nlines * sizeof(char*))) != NULL);
+
+  int nread = readlines(lines, nlines, getchar);
 
   if (lines != NULL) {
     printf("\nOutput:\n");
