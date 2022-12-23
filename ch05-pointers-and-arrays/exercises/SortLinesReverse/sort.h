@@ -5,10 +5,19 @@
 extern "C" {
 #endif
 
+#include <stdbool.h>
+
+/**
+ * @brief Sort the content of the array in numerical and/or reverse order.
+*/
+void sort(void* v[], int size, bool numeric, bool reverse);
+
 /**
  * @brief Sort the given lines using the given comparison function.
 */
-void qsort(void *lineptr[], int left, int right, int (*comp)(void *, void *));
+static void quicksort(void *lineptr[], int left, int right,
+  int (*comp)(void *, void *), bool reverse);
+
 void swap(void *v[], int i, int j);
 
 #ifdef __cplusplus

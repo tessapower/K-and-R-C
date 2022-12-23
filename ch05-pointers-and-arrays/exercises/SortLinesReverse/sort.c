@@ -1,7 +1,15 @@
 #include "sort.h"
+#include "compare.h"
 
-void qsort(void *v[], const int left, const int right,
-  int (*comp)(void *, void *)) {
+#include <string.h>
+
+void sort(void* v[], int size, bool numeric, bool reverse) {
+  quicksort(v, 0, size - 1, (int (*)(void*, void*))(numeric ? numcmp : strcmp),
+    reverse);
+}
+
+void quicksort(void *v[], const int left, const int right,
+  int (*comp)(void *, void *), bool reverse) {
   // Do nothing if array contains fewer than two elements
   if (left >= right) return;
 
@@ -9,12 +17,16 @@ void qsort(void *v[], const int left, const int right,
   int last = left;
   
   for (int i = left + 1; i <= right; ++i) {
-    if ((*comp)(v[i], v[left]) <= 0) swap(v, ++last, i);
+    if (reverse) {
+      if ((*comp)(v[i], v[left]) > 0) swap(v, ++last, i);
+    } else {
+      if ((*comp)(v[i], v[left]) < 0) swap(v, ++last, i);
+    }
   }
 
   swap(v, left, last);
-  qsort(v, left, last - 1, comp);
-  qsort(v, last + 1, right, comp);
+  quicksort(v, left, last - 1, comp, reverse);
+  quicksort(v, last + 1, right, comp, reverse);
 }
 
 void swap(void* v[], const int i, const int j) {

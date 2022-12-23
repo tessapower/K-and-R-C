@@ -4,7 +4,6 @@
 
 #include "strutils.h"
 #include "sort.h"
-#include "compare.h"
 
 // Exercise 5-14: Modify the sort program to handle a -r flag, which indicates
 //  sorting in reverse (decreasing) order. Be sure that -r works with -n.
@@ -12,11 +11,29 @@
 #define MAXLINES 5000
 char *lineptr[5000];
 
+void printhelp(void);
+
 int main(int argc, char** argv) {
   bool numeric = false;
+  bool reverse = false;
 
-  if (argc > 1 && strcmp(argv[1], "-n") == 0) {
-    numeric = true;
+  while (--argc && (*++argv)[0] == '-') {
+    int c = 0;
+    while (c = *++argv[0]) {
+      switch (c) {
+      case 'r':
+        reverse = true;
+        break;
+      case 'n':
+        numeric = true;
+        break;
+      default:
+        printf("unknown argument %c\n", c);
+        printhelp();
+        
+        return 1;
+      }
+    }
   }
   
   int nlines = 0;
@@ -26,12 +43,17 @@ int main(int argc, char** argv) {
     return 1;
   }
 
-  // Sort the lines either numerically or lexicographically
-  qsort((void **) lineptr, 0, nlines - 1,
-    (int (*)(void *, void *))(numeric ? numcmp : strcmp));
+  // Sort the lines of input
+  sort((void **) lineptr, nlines, numeric, reverse);
 
-  // write to stdout
+  // Write lines to stdout
   writelines(lineptr, nlines);
 
   return 0;
+}
+
+void printhelp(void) {
+  printf("Usage: sort [-r] [-n]\n");
+  printf("  -r: sort in reverse order\n");
+  printf("  -n: sort numerically\n");
 }
