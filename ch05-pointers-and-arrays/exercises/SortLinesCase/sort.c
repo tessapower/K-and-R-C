@@ -1,10 +1,19 @@
 #include "sort.h"
 #include "compare.h"
 
+#include <stdlib.h>
 #include <string.h>
 
-void sort(void* v[], int size, bool numeric, bool reverse) {
-  quicksort(v, 0, size - 1, (int (*)(void*, void*))(numeric ? numcmp : strcmp),
+void sort(void* v[], int size, int options) {
+  bool caseinsensitive = options & CASE_INSENSITIVE;
+  bool numeric = options & NUMERIC;
+  bool reverse = options & REVERSE;
+  quicksort(v, 0, size - 1, 
+    (int (*)(void*, void*))(numeric
+      ? numcmp
+      : (caseinsensitive
+        ? _stricmp
+        : strcmp)),
     reverse);
 }
 

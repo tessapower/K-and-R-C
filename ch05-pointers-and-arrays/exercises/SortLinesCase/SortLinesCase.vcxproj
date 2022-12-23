@@ -19,7 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="compare.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="sort.c" />
+    <ClCompile Include="strutils.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="compare.h" />
+    <ClInclude Include="sort.h" />
+    <ClInclude Include="strutils.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

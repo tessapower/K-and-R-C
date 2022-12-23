@@ -15,27 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="compare.c">
+    <ClCompile Include="SortLinesCaseTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="sort.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="strutils.c">
+    <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="compare.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="sort.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="strutils.h">
+    <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -5,9 +5,11 @@
 extern "C" {
 #endif
 
+#include <stdbool.h>
+
 /**
- * @brief Compares the two strings numerically, returns 0 if they are equal,
- * 1 if lhs > rhs, and -1 if lhs < rhs.
+ * @brief Compares two strings numerically, returns 0 if they are equal,
+ *  1 if lhs > rhs, and -1 if lhs < rhs.
 */
 int numcmp(const char *lhs, const char *rhs);
 

@@ -6,11 +6,14 @@ extern "C" {
 #endif
 
 #include <stdbool.h>
+#define REVERSE          0x1 << 1;
+#define NUMERIC          0x1 << 2;
+#define CASE_INSENSITIVE 0x1 << 3;
 
 /**
  * @brief Sort the content of the array in numerical and/or reverse order.
 */
-void sort(void* v[], int size, bool numeric, bool reverse);
+void sort(void* v[], int size, int options);
 
 /**
  * @brief Sort the given lines using the given comparison function.

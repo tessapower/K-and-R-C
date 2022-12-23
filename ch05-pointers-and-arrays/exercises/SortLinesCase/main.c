@@ -14,18 +14,20 @@ char *lineptr[5000];
 void printhelp(void);
 
 int main(int argc, char** argv) {
-  bool numeric = false;
-  bool reverse = false;
+  int options = 0x0000;
 
   while (--argc && (*++argv)[0] == '-') {
     int c = 0;
     while (c = *++argv[0]) {
       switch (c) {
       case 'r':
-        reverse = true;
+        options |= REVERSE;
         break;
       case 'n':
-        numeric = true;
+        options |= NUMERIC;
+        break;
+      case 'f':
+        options |= CASE_INSENSITIVE;
         break;
       default:
         printf("unknown argument %c\n", c);
@@ -44,7 +46,7 @@ int main(int argc, char** argv) {
   }
 
   // Sort the lines of input
-  sort((void **) lineptr, nlines, numeric, reverse);
+  sort((void **) lineptr, nlines, options);
 
   // Write lines to stdout
   writelines(lineptr, nlines);
