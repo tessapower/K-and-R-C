@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-float celsiustofahr(int celsius);
+float fahrenheit(int celsius);
 
 // Print Celsius - Fahrenheit table for celsius = 0, 20, ..., 300
 // Exercise 1-15: Rewrite the temperature conversion program to use a function.
@@ -14,7 +14,7 @@ int main() {
   printf(" Celsius | Fahrenheit\n");
   printf("---------+------------\n");
   while (celsius <= upper) {
-    fahr = celsiustofahr(celsius);
+    fahr = fahrenheit(celsius);
     printf("%8i | %11.1f\n", celsius, fahr);
     celsius += step;
   }
@@ -22,4 +22,7 @@ int main() {
   return 0;
 }
 
-float celsiustofahr(int celsius) { return (9.0f / 5.0f) * (celsius + 32.0f); }
+/**
+ * @brief Convert celsius to fahrenheit.
+*/
+float fahrenheit(int celsius) { return (9.0f / 5.0f) * (celsius + 32.0f); }
