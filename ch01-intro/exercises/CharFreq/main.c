@@ -9,7 +9,7 @@ int main() {
   int space = 0;
   int tab = 0;
   int newline = 0;
-  int unknown = 0;
+  int other = 0;
 
   int digit[DIGIT];
   for (int i = 0; i < DIGIT; ++i) {
@@ -21,6 +21,7 @@ int main() {
     alpha[i] = 0;
   }
 
+  // Collect characters
   int c;
   while ((c = getchar()) != EOF) {
     if (c == ' ') {
@@ -36,12 +37,13 @@ int main() {
     } else if (c >= 'a' && c <= 'z') {
       ++alpha[c - 'a'];
     } else {
-      ++unknown;
+      ++other;
     }
   }
 
+  // Print digit frequencies
   for (int i = 0; i < DIGIT; ++i) {
-    printf(" %c |", '0' + i);
+    printf(" %c     |", '0' + i);
 
     if (digit[i] > 0) {
       printf("%0*d\n", digit[i], 0);
@@ -50,8 +52,9 @@ int main() {
     }
   }
 
+  // Print alpha frequencies
   for (int i = 0; i < ALPHA; ++i) {
-    printf(" %c |", 'A' + i);
+    printf(" %c     |", 'A' + i);
 
     if (alpha[i] > 0) {
       printf("%0*d\n", alpha[i], 0);
@@ -60,24 +63,34 @@ int main() {
     }
   }
 
-  printf("\\s |");
+  // Print whitespace frequencies
+  printf("\\s     |");
   if (space > 0) {
     printf("%0*d\n", space, 0);
   } else {
     printf("\n");
   }
 
-  printf("\\t |");
+  printf("\\t     |");
   if (tab > 0) {
     printf("%0*d\n", tab, 0);
   } else {
     printf("\n");
   }
 
-  printf("\\n |");
+  printf("\\n     |");
   if (newline > 0) {
     printf("%0*d\n", newline, 0);
   } else {
+    printf("\n");
+  }
+
+  // Print other characters frequency
+  printf("Other |");
+  if (other > 0) {
+    printf("%0*d\n", other, 0);
+  }
+  else {
     printf("\n");
   }
 
