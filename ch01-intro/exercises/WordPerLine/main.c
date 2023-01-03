@@ -10,11 +10,13 @@ int main() {
 
   while ((c = getchar()) != EOF) {
     if (c == ' ' || c == '\n' || c == '\t') {
-      state = OUT;
-    } else {
-      if (state == OUT) {
-        state = IN;
+      if (state == IN) { // end of the word
+        state = OUT;
         putchar('\n');
+      }
+    } else {
+      if (state == OUT) { // end of the word
+        state = IN;
       }
       putchar(c);
     }
