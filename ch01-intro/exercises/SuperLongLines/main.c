@@ -7,13 +7,22 @@
 //  will correctly print the length of arbitrarily long input lines, and as
 //  much as possible of the text.
 int main() {
-  int len;
   char l[MAX_LINE];
+  char longest[MAX_LINE];
+  int max = 0;
+  int len;
 
-  while ((len = getline(l, MAX_LINE, getchar)) > 0) {
+  while ((len = getline(l, MAX_LINE, getchar)) > 0 && l[0] != '\n') {
     printf("%d\n", len);
     printf("%s", l);
+    if (len > max) {
+      max = len;
+      copy(longest, l);
+    }
   }
+
+  // print longest line if there were any
+  if (max > 0) printf("longest: %s", longest);
 
   return 0;
 }
