@@ -24,15 +24,15 @@ int main() {
 
 int getline(char s[], const int lim) {
   int i = 0;
-  enum boolean endOfLine = FALSE;
-  while (!endOfLine) {
-    if (i >= lim - 1) endOfLine = TRUE;
-    else if (!endOfLine) {
+  enum boolean end = FALSE;
+  while (!end) {
+    if (i >= lim - 1) end = TRUE;
+    else if (!end) {
       char c = getchar();
-      if (c == '\n') endOfLine = TRUE;
-      else if (c == EOF) endOfLine = TRUE;
+      if (c == '\n') end = TRUE;
+      else if (c == EOF) end = TRUE;
 
-      if (!endOfLine) s[i++] = c;
+      if (!end) s[i++] = c;
     }
   }
   
