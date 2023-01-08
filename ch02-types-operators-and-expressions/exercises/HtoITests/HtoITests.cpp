@@ -1,7 +1,5 @@
 #include "gtest/gtest.h"
-extern "C" {
-  #include "strutils.h"
-}
+#include "strutils.h"
 
 namespace HexToIntTests {
   TEST(htoi, NaN) {
@@ -9,7 +7,7 @@ namespace HexToIntTests {
   }
 
   TEST(htoi, zero) {
-    EXPECT_EQ(htoi(  "0"), 0x0);
+    EXPECT_EQ(htoi("0"), 0x0);
     EXPECT_EQ(htoi("0x0"), 0x0);
     EXPECT_EQ(htoi("0X0"), 0x0);
   }
@@ -51,9 +49,9 @@ namespace HexToIntTests {
 
     EXPECT_EQ(htoi("XYZABC"), 0x0);
     EXPECT_EQ(htoi("0xXYZABC"), 0x0);
-    
+
     EXPECT_EQ(htoi("0x0x0C1"), 0x0);
-    
+
     EXPECT_EQ(htoi("AXB1J2"), 0xA);
     EXPECT_EQ(htoi("0xAXB1J2"), 0xA);
   }
@@ -61,25 +59,25 @@ namespace HexToIntTests {
   TEST(htoi, digits) {
     EXPECT_EQ(htoi("2"), 0x2);
     EXPECT_EQ(htoi("0x2"), 0x2);
-    
+
     EXPECT_EQ(htoi("3"), 0x3);
     EXPECT_EQ(htoi("0x3"), 0x3);
-    
+
     EXPECT_EQ(htoi("4"), 0x4);
     EXPECT_EQ(htoi("0x4"), 0x4);
-    
+
     EXPECT_EQ(htoi("5"), 0x5);
     EXPECT_EQ(htoi("0x5"), 0x5);
-    
+
     EXPECT_EQ(htoi("6"), 0x6);
     EXPECT_EQ(htoi("0x6"), 0x6);
-    
+
     EXPECT_EQ(htoi("7"), 0x7);
     EXPECT_EQ(htoi("0x7"), 0x7);
-    
+
     EXPECT_EQ(htoi("8"), 0x8);
     EXPECT_EQ(htoi("0x8"), 0x8);
-    
+
     EXPECT_EQ(htoi("9"), 0x9);
     EXPECT_EQ(htoi("0x9"), 0x9);
 
@@ -94,7 +92,7 @@ namespace HexToIntTests {
 
     EXPECT_EQ(htoi("C"), 0xC);
     EXPECT_EQ(htoi("0xC"), 0xC);
-    
+
     EXPECT_EQ(htoi("D"), 0xD);
     EXPECT_EQ(htoi("0xD"), 0xD);
 
@@ -111,28 +109,28 @@ namespace HexToIntTests {
   TEST(htoi, combination) {
     EXPECT_EQ(htoi("ABC123"), 0xABC123);
     EXPECT_EQ(htoi("0xABC123"), 0xABC123);
-    
+
     EXPECT_EQ(htoi("123ABC"), 0x123ABC);
     EXPECT_EQ(htoi("0x123ABC"), 0x123ABC);
-    
+
     EXPECT_EQ(htoi("000C1"), 0xC1);
     EXPECT_EQ(htoi("0x000C1"), 0xC1);
-    
+
     EXPECT_EQ(htoi("D9001"), 0xD9001);
     EXPECT_EQ(htoi("0xD9001"), 0xD9001);
-    
+
     EXPECT_EQ(htoi("F67E"), 0xF67E);
     EXPECT_EQ(htoi("0xF67E"), 0xF67E);
-    
+
     EXPECT_EQ(htoi("FFFF"), 0xFFFF);
     EXPECT_EQ(htoi("0xFFFF"), 0xFFFF);
-    
+
     EXPECT_EQ(htoi("A1B2C3"), 0xA1B2C3);
     EXPECT_EQ(htoi("0xA1B2C3"), 0xA1B2C3);
   }
 }
 
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+int main(int argc, char** argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
 }
