@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include "strutils.h"
 
+
 TEST(squeeze, empty) {
   char s[] = "";
   char toDelete[] = "";
@@ -67,9 +68,4 @@ TEST(squeeze, standard) {
   squeeze(s, toDelete);
 
   EXPECT_STREQ(s, expected);
-}
-
-int main(int argc, char** argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
 }

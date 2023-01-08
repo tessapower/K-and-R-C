@@ -5,6 +5,7 @@
 
 // Exercise 2-4: Write an alternate version of squeeze(s1, s2) that deletes
 //  each character in s1 that matches any character in the string s2.
+
 void squeeze(char s[], const char todelete[]) {
   int j = 0;
   for (int i = 0; s[i] != '\0'; ++i) {
@@ -23,4 +24,3 @@ bool contains(const char s[], const int c) {
 
   return false;
 }
-
