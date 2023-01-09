@@ -5,10 +5,8 @@
 
 void strconcat(char *s, char *t) {
   // Find end of s
-  while (*s != '\0')
-    s++;
+  while (*s) s++;
 
   // Copy t
-  while (*s++ = *t++)
-    ;
+  while (*s++ = *t++);
 }
