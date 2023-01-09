@@ -9,7 +9,6 @@ bool isnum(const int c);
 bool isnegativenum(const int c);
 bool isdecnum(const int c);
 bool iscommand(const int c);
-bool isvalidvarname(const int c);
 
 /**
  * @brief Get next operator or numeric operand
@@ -22,8 +21,6 @@ int getop(char s[]) {
   int i = 0;
   s[i++] = c;
   s[i] = '\0';
-
-  if (c == VAR_ACCESS && isvalidvarname(peekch())) s[0] = getch();
 
   if (!isnum(c)) return c;
 
@@ -79,8 +76,4 @@ bool isdecnum(const int c) {
 
 bool iscommand(const int c) {
   return c == PRINT || c == SWAP || c == DUPLICATE || c == CLEAR;
-}
-
-bool isvalidvarname(const int c) {
-  return c >= 'a' && c <= 'z';
 }
