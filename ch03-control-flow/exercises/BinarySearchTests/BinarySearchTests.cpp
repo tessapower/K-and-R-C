@@ -1,11 +1,8 @@
-#include "pch.h"
 #include <time.h>
 #include <stdlib.h>
 #include "CppUnitTest.h"
 
-extern "C" {
-  #include "binsearch.h"
-}
+#include "binsearch.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

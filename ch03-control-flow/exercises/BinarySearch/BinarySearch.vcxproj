@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
-    <ClCompile Include="binsearch.cpp" />
+    <ClCompile Include="binsearch.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binsearch.h" />
