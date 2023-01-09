@@ -12,7 +12,9 @@ extern "C" {
 //  input.
 
 /**
- * @brief Get the next integer from input into *pn
+ * @brief Get the next integer from input into pn. Returns zero if there is no
+ *  valid integer on the input, EOF if the end of input was reached, or a
+ *  positive value on success.
 */
 int getint(int* pn);
 
