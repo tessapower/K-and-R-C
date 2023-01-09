@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "calc.h"
 
 int type;
@@ -34,7 +35,8 @@ void runcalc(void) {
       break;
     case MOD:
       op2 = pop();
-      push((int)pop() % (int)op2);
+      if (op2 != 0.0) push(fmod(pop(), op2));
+      else printf("error: zero divisor\n");
       break;
     case PRINT:
       printf("  = %.8g\n", peek());

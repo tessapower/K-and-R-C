@@ -42,7 +42,8 @@ void runcalc(void) {
       break;
     case MOD:                // "17 3 %"
       op2 = pop();
-      push((int)pop() % (int)op2);
+      if (op2 != 0.0) push(fmod(pop(), op2));
+      else printf("error: zero divisor\n");
 
       break;
     case POW:                // "2 8 ^"
@@ -56,28 +57,6 @@ void runcalc(void) {
       break;
     case SIN:                // "0.5 ~"
       push(sin(pop()));
-
-      break;
-    case VAR_ASSIGN:             // "e 20 ="
-      if (varidx == -1) {
-        printf("error: no variable was specified\n");
-      } else {
-        vars[varidx] = pop();
-        // unset active variable
-        varidx = -1;
-      }
-
-      break;
-    case VAR_ACCESS:
-      // Get the variable name
-      int var = s[0];
-      // Push the value onto the stack if the variable name is valid
-      if (var >= 'a' && var <= 'z') {
-        int idx = var - 'a';
-
-        if (!push(vars[idx]))
-          printf("error: stack full, can't push %g\n", d);
-      }
 
       break;
     case PRINT:              // "?"

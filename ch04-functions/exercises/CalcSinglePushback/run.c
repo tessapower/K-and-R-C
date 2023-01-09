@@ -42,7 +42,8 @@ void runcalc(void) {
       break;
     case MOD:                // "17 3 %"
       op2 = pop();
-      push((int)pop() % (int)op2);
+      if (op2 != 0.0) push(fmod(pop(), op2));
+      else printf("error: zero divisor\n");
 
       break;
     case POW:                // "2 8 ^"
