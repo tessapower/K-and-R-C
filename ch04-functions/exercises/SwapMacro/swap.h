@@ -8,7 +8,7 @@ extern "C" {
 // Exercise 4-14: Define a macro swap(t, x, y) that interchanges two arguments
 //  of type t.
 
-#define SWAP(t, x, y) t = x, x = y, y = t;
+#define SWAP(t, x, y) { t _z; _z = x, x = y, y = _z; }
 
 #ifdef __cplusplus
 }
