@@ -5,11 +5,14 @@
 // Exercise 3-5: Write the function itob(n, s, b) that converts the integer n
 //  into a base b character representation in the string s. In particular,
 //  itob(n, s, 16) formats n as a hex integer in s.
+
 void itob(int n, char s[], const int b) {
   assert(b > 1 && b <= 16);
 
   if (b == 10) {
+    // Handle base 10 separately, as negative numbers are treated differently
     itostr(n, s);
+
     return;
   }
 
@@ -20,13 +23,8 @@ void itob(int n, char s[], const int b) {
   do {
     int d = num % b;
     if (d < 0) d = -d;
-    if (d >= 10) {
-      d -= 10;
-      d = d + 'a';
-    } else {
-      d = d + '0';
-    }
-    s[i++] = d;
+    // Use letters if number is greater than single digits
+    s[i++] = (d >= 10) ? d - 10 + 'a' : d + '0';
   } while ((num /= b) != 0);
 
   s[i] = '\0';

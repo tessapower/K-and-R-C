@@ -1,11 +1,8 @@
-#include "pch.h"
-#include "CppUnitTest.h"
 #include <limits.h>
 #include <string>
 
-extern "C" {
-  #include "strutils.h"
-}
+#include "CppUnitTest.h"
+#include "strutils.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
