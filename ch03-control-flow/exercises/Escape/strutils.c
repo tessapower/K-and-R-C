@@ -136,6 +136,11 @@ void unescape(char s[], char t[]) {
               s[j++] = '\?';
               break;
             }
+            default: {
+              s[j++] = '\\';
+              s[j++] = t[i];
+              break;
+            }
           }
         }
         break;
@@ -148,6 +153,7 @@ void unescape(char s[], char t[]) {
 
     i++;
   }
-
+  
+  // Add '\0'
   s[j] = t[i];
 }
