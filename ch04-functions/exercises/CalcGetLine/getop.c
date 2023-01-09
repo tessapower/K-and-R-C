@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include "calc.h"
 
+int getline(char s[], int lim);
 void skipws(void);
 bool isdecpoint(const int c);
 bool isoperator(const int c);
@@ -24,7 +25,8 @@ int getop(char s[]) {
 
   if (line[lp] == '\0') {
     // If we reached the end of this line, get the next line
-    fgets(line, MAXOP, stdin);
+    if ((getline(line, MAXOP)) == 0) return EOF;
+
     // Reset pointer to beginning
     lp = 0;
     // Skip leading whitespace
@@ -53,6 +55,25 @@ int getop(char s[]) {
   s[i] = '\0';
 
   return NUMBER;
+}
+
+int getline(char s[], int lim) {
+  int c = 0;
+  // Declare i outside of loop so we can return the length
+  int i;
+  for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
+    s[i] = c;
+  }
+
+  // Handle end of line
+  if (c == '\n' && i > 0) {
+    if (s[i - 1] == '\r') --i; // backtrack over the carriage return
+    s[i++] = c;
+  }
+
+  s[i] = '\0';
+
+  return i;
 }
 
 void skipws(void) {
