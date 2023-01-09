@@ -1,7 +1,5 @@
 #include "gtest/gtest.h"
-extern "C" {
-  #include "strutils.h"
-}
+#include "strutils.h"
 
 TEST(any, empty) {
   EXPECT_EQ(any("", ""), -1);
@@ -29,4 +27,9 @@ TEST(any, numbers) {
 TEST(any, chars) {
   EXPECT_EQ(any("lorem ipsum sit dolor amet.", "aeiou"), 22);
   EXPECT_EQ(any("lorem ipsum sit dolor amet.", "zyxwv"), -1);
+}
+
+int main(int argc, char** argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
 }
