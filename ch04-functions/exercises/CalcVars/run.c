@@ -11,6 +11,9 @@ int varidx = -1;
 double last = 0.0;
 
 void runcalc(void) {
+  for (int i = 0; i < 26; ++i)
+    vars[i] = 0.0;
+
   while ((type = getop(s)) != EOF) {
     switch (type) {
     case NUMBER:
