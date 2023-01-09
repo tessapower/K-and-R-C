@@ -1,9 +1,6 @@
-#include "pch.h"
 #include "CppUnitTest.h"
 
-extern "C" {
-  #include "strutils.h"
-}
+#include "strutils.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -25,16 +22,16 @@ namespace IntToMinWidthStringTests {
     TEST_METHOD(itostrLessThanPad) {
       char nStr[64];
       itostr(123456, nStr, 10);
-      Assert::AreEqual(std::string{"0000123456"}, std::string(nStr));
+      Assert::AreEqual(std::string{"    123456"}, std::string(nStr));
 
       itostr(123, nStr, 4);
-      Assert::AreEqual(std::string{"0123"}, std::string(nStr));
+      Assert::AreEqual(std::string{" 123"}, std::string(nStr));
 
       itostr(-111, nStr, 5);
-      Assert::AreEqual(std::string{"-0111"}, std::string(nStr));
+      Assert::AreEqual(std::string{" -111"}, std::string(nStr));
 
       itostr(-18747, nStr, 8);
-      Assert::AreEqual(std::string{"-0018747"}, std::string(nStr));
+      Assert::AreEqual(std::string{"  -18747"}, std::string(nStr));
     }
 
     TEST_METHOD(itostrMoreThanPad) {

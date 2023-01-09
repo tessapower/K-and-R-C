@@ -6,6 +6,7 @@
 // Exercise 3-6: Write a version of itoa that accepts three arguments instead
 //  of two. The third argument is a minimum field width; the converted number
 //  must be padded with blanks on the left if necessary to make it wide enough.
+
 void itostr(int n, char s[], const int w) {
   assert(w >= 0);
 
@@ -19,12 +20,11 @@ void itostr(int n, char s[], const int w) {
     s[i++] = d + '0';
   } while ((n /= 10) != 0);
 
-  const int pad = (sign < 0 && w > 0) ? w - 1 : w;
-  while (i < pad) {
-    s[i++] = '0';
-  }
-
   if (sign < 0) s[i++] = '-';
+
+  while (i < w) {
+    s[i++] = ' ';
+  }
 
   s[i] = '\0';
 
