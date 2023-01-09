@@ -10,7 +10,9 @@ extern "C" {
 // Exercise 5-2: Write getfloat, the floating-point analog of getint.
 
 /**
- * @brief Get the next float from input into *pn.
+ * @brief Get the next float from input into *pn. Returns zero if there is no
+ *  valid integer on the input, EOF if the end of input was reached, or a
+ *  positive value on success.
 */
 int getfloat(float* pn);
 
