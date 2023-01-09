@@ -3,6 +3,7 @@
 
 // Exercise 2-8: Write a function rightrot(x, n) that returns the value of
 //  integer x rotated to the right by n bit positions.
+
 unsigned rightrot(unsigned x, unsigned n) {
   unsigned nbits = sizeof(x) * CHAR_BIT;
   n %= nbits;

@@ -1,7 +1,5 @@
 #include "gtest/gtest.h"
-extern "C" {
-  #include "bittwiddling.h"
-}
+#include "bittwiddling.h"
 
 TEST(rightrot, rotateByZero) {
   EXPECT_EQ(rightrot(0b0101, 0), 0b0101);
@@ -18,8 +16,8 @@ TEST(rightrot, rotateByOne) {
   unsigned x = 0b0101;
   // Shift the 1 in the LSB position to MSB position to get 1000...0010
   unsigned expected = (0b1 << (sizeof(unsigned) * CHAR_BIT - 1)) | (x >> 1);
-  EXPECT_EQ(rightrot(x,                                   1), expected);
-  EXPECT_EQ(rightrot(x, sizeof(unsigned) * CHAR_BIT     + 1), expected);
+  EXPECT_EQ(rightrot(x, 1), expected);
+  EXPECT_EQ(rightrot(x, sizeof(unsigned) * CHAR_BIT + 1), expected);
   EXPECT_EQ(rightrot(x, sizeof(unsigned) * CHAR_BIT * 2 + 1), expected);
   EXPECT_EQ(rightrot(x, sizeof(unsigned) * CHAR_BIT * 3 + 1), expected);
   EXPECT_EQ(rightrot(x, sizeof(unsigned) * CHAR_BIT * 4 + 1), expected);
@@ -36,4 +34,8 @@ TEST(rightrot, rotateByMany) {
   EXPECT_EQ(rightrot(x, 17), 0b010100101000000000000000);
   EXPECT_EQ(rightrot(x, 21), 0b01010010100000000000);
 }
-  
+
+int main(int argc, char** argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
