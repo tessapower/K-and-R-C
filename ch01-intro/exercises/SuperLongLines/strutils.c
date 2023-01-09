@@ -8,7 +8,7 @@ int getline(char s[], const int lim, int (*getc)()) {
   int len = 0;
   int i = 0;
   while ((c = getc()) != EOF && c != '\n' && c != '\0') {
-    if (i < lim - 2) {
+    if (i < lim - 1) {
       s[i++] = c;
     };
 

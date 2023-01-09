@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
-    <ClCompile Include="strutils.cpp" />
+    <ClCompile Include="strutils.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="strutils.h" />
