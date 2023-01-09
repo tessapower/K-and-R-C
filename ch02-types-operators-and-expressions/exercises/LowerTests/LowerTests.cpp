@@ -1,7 +1,5 @@
 #include "gtest/gtest.h"
-extern "C" {
-  #include "strutils.h"
-}
+#include "strutils.h"
 
 TEST(lower, nonalpha) {
   EXPECT_EQ(lower(' '), ' ');
