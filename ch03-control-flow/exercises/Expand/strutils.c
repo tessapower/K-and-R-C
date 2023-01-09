@@ -6,6 +6,7 @@
 //  abc...xyz in s2. Allow for letters of either case and digits, and be
 //  prepared to handle cases like a-b-c, a-z0-9, and -a-z. Arrange that a
 //  leading or trailing - is taken literally.
+
 void expand(char s1[], char s2[]) {
   int i = 0;
   int j = 0;

@@ -1,6 +1,10 @@
 #ifndef STRUTILS_H
 #define STRUTILS_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdbool.h>
 
 /**
@@ -18,4 +22,8 @@ void expand(char s1[], char s2[]);
 */
 bool isvalidrange(const int start, const int end);
 
-#endif  // STRUTILS_H
+#ifdef __cplusplus
+}
+#endif
+
+#endif // STRUTILS_H

@@ -1,9 +1,6 @@
-#include "pch.h"
 #include "CppUnitTest.h"
 
-extern "C" {
-  #include "strutils.h"
-}
+#include "strutils.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
