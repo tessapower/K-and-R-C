@@ -40,11 +40,10 @@ void month_day(const int year, const int yearday, int* pmonth, int* pday) {
 
   char *dt = daytable[leap];
   int d = yearday;
-  int m = 1;
-  while (d > dt[m]) {
-    d -= dt[m++];
+  while (d > *++dt) {
+    d -= *dt;
   }
 
-  *pmonth = m;
+  *pmonth = dt - *(daytable + leap);
   *pday = d;
 }
