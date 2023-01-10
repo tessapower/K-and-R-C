@@ -171,6 +171,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortLinesCase", "ch05-point
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortLinesCaseTests", "ch05-pointers-and-arrays\exercises\SortLinesCaseTests\SortLinesCaseTests.vcxproj", "{B18D5BDA-8E22-4C70-857F-7458877E17B2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortLinesDirOrder", "ch05-pointers-and-arrays\exercises\SortLinesDirOrder\SortLinesDirOrder.vcxproj", "{8B43B3E0-3197-453A-B7C5-E0DCDFB5273E}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HtoI", "ch02-types-operators-and-expressions\exercises\HtoI\HtoI.vcxproj", "{10B6A122-B440-4A55-955F-80F2766DCDCB}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HtoITests", "ch02-types-operators-and-expressions\exercises\HtoITests\HtoITests.vcxproj", "{D922A332-0486-4AE7-B2F1-E09DC6B6021E}"
