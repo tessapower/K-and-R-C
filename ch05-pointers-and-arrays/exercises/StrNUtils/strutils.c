@@ -29,14 +29,8 @@ void strnconcat(char* s, char* t, int n) {
   while (*s != '\0')
     s++;
 
-  // Copy t
-  int i = 0;
-  while (i++ < n && (*s++ = *t++))
-    ;
-
-  // We need to add the null character because this may not have been included
-  // in the n characters
-  *s = '\0';
+  // copy t onto end of s
+  strncopy(s, t, n);
 }
 
 int strncomp(char* s, char* t, int n) {
