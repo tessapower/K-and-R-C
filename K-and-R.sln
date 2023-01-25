@@ -217,6 +217,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WordCountListTests", "ch06-
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Undef", "ch06-structures\exercises\Undef\Undef.vcxproj", "{3663E273-1564-4D1D-A163-E5F56E3AD557}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DefineProcessor", "ch06-structures\exercises\DefineProcessor\DefineProcessor.vcxproj", "{842292DF-ED7D-4A02-8CF6-4EFB82FB0E36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -1081,6 +1083,14 @@ Global
 		{3663E273-1564-4D1D-A163-E5F56E3AD557}.Release|x64.Build.0 = Release|x64
 		{3663E273-1564-4D1D-A163-E5F56E3AD557}.Release|x86.ActiveCfg = Release|Win32
 		{3663E273-1564-4D1D-A163-E5F56E3AD557}.Release|x86.Build.0 = Release|Win32
+		{842292DF-ED7D-4A02-8CF6-4EFB82FB0E36}.Debug|x64.ActiveCfg = Debug|x64
+		{842292DF-ED7D-4A02-8CF6-4EFB82FB0E36}.Debug|x64.Build.0 = Debug|x64
+		{842292DF-ED7D-4A02-8CF6-4EFB82FB0E36}.Debug|x86.ActiveCfg = Debug|Win32
+		{842292DF-ED7D-4A02-8CF6-4EFB82FB0E36}.Debug|x86.Build.0 = Debug|Win32
+		{842292DF-ED7D-4A02-8CF6-4EFB82FB0E36}.Release|x64.ActiveCfg = Release|x64
+		{842292DF-ED7D-4A02-8CF6-4EFB82FB0E36}.Release|x64.Build.0 = Release|x64
+		{842292DF-ED7D-4A02-8CF6-4EFB82FB0E36}.Release|x86.ActiveCfg = Release|Win32
+		{842292DF-ED7D-4A02-8CF6-4EFB82FB0E36}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
