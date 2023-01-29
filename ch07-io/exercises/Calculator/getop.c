@@ -11,38 +11,44 @@ bool isdecnum(const int c);
 bool iscommand(const int c);
 bool isvalidvarname(const int c);
 
+char line[MAXOP];
+size_t len = 0;
+int lp = 0;
+
 /**
  * @brief Get next operator or numeric operand
 */
 int getop(char s[]) {
+  // Skip whitespace
   skipws();
 
-  // Get the first character from stdin
+  if (line[lp] == '\0') {
+    // If we reached the end of this line, get the next line
+    if (scanf("%s", line) == 0) return EOF;
+
+    // Reset pointer to beginning
+    lp = 0;
+    // Skip leading whitespace
+    skipws();
+  }
+
   int i = 0;
-  int c = getch();
+  int c = line[lp++];
   s[i++] = c;
   s[i] = '\0';
 
-  if (c == VAR_ACCESS && isvalidvarname(peekch())) s[0] = getch();
+  if (c == VAR_ACCESS && isvalidvarname(line[lp])) s[0] = line[lp++];
 
   if (!isnum(c)) return c;
 
-  // Integer
-  while (isdigit(peekch())) {
-    c = getch();
-    s[i++] = c;
-  }
+  // Collect integer part digits
+  while (isdigit(line[lp])) s[i++] = line[lp++];
 
-  // Fraction
-  if (isdecpoint(peekch())) {
+  if (isdecpoint(line[lp])) {
     // Add the decimal point
-    c = getch();
-    s[i++] = c;
-    // Collect fractional part
-    while (isdigit(peekch())) {
-      c = getch();
-      s[i++] = c;
-    }
+    s[i++] = line[lp++];
+    // Collect fractional digits
+    while (isdigit(line[lp])) s[i++] = line[lp++];
   }
 
   s[i] = '\0';
@@ -50,8 +56,8 @@ int getop(char s[]) {
   return NUMBER;
 }
 
-void skipws() {
-  while (isspace(peekch())) getch();
+void skipws(void) {
+  while (isspace(line[lp])) lp++;
 }
 
 bool isdecpoint(const int c) {
@@ -67,12 +73,12 @@ bool isnum(const int c) {
 }
 
 bool isnegativenum(const int c) {
-  const int next = peekch();
+  const int next = line[lp];
   return c == '-' && (isdigit(next) || isdecnum(next));
 }
 
 bool isdecnum(const int c) {
-  const int next = peekch();
+  const int next = line[lp];
   return (isdecpoint(c) && isdigit(next)) || (isdigit(c) && isdecpoint(next));
 }
 
