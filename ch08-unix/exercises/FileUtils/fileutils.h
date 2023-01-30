@@ -32,15 +32,40 @@ extern FILE _iob[OPEN_MAX];
 /**
  * @brief Allocate and fill input buffer.
 */
-int _fillbuf(FILE*);
+int _fillbuffer(FILE* fp);
+
+/**
+ * @brief Flush output buffer.
+*/
+int _flushbuffer(int fd, FILE* fp);
+
+/**
+ * @brief Flush the output buffer to the file.
+*/
+int flushfile(FILE* fp);
+
+/**
+ * @brief Close a file.
+*/
+int closefile(FILE* fp);
 
 /**
  * @brief Open a file and return a file pointer.
 */
-FILE *openfile(const char* path, const char* mode);
+FILE* openfile(const char* path, const char* mode);
+
+#define feof(p) (((p)->flags._EOF) != 0)
+#define ferror(p) (((p)->flags._ERR) != 0)
+#define fileno(p) ((p)->fd)
+
+#define getc(p) (--(p)->cnt >= 0 ? (unsigned char) *(p)->ptr++ : _fillbuffer(p))
+#define putc(c, p) (--(p)->cnt >= 0 ? *(p)->ptr++ = (x) : _flushbuffer((c), p))
+
+#define getchar() getc(stdin)
+#define putchar(c) putc((c), stdout)
 
 #ifdef __cplusplus
-extern }
+}
 #endif
 
 #endif // FILEUTILS_H

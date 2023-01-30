@@ -60,7 +60,7 @@ FILE *openfile(const char* name, const char* mode) {
   return fp;
 }
 
-int _fillbuf(FILE* fp) {
+int _fillbuffer(FILE* fp) {
   if (fp->flags._READ == 0 | fp->flags._EOF == 1 | fp->flags._ERR == 1) return EOF;
 
   int bufsize = (fp->flags._UNBUF) ? 1 : BUFSIZ;
@@ -82,4 +82,75 @@ int _fillbuf(FILE* fp) {
   }
 
   return (unsigned char) *fp->ptr++;
+}
+
+int _flushbuffer(int c, FILE* fp) {
+  // Handle invalid file pointer
+  if (fp < _iob || fp >= _iob + OPEN_MAX) return EOF;
+  // Handle invalid file mode
+  if (fp->flags._WRITE == 0 | fp->flags._ERR == 1) return EOF;
+
+  int bufsize = (fp->flags._UNBUF) ? 1 : BUFSIZ;
+
+  if (fp->base == NULL) { // No buffer yet
+    // Check if buffer available
+    if ((fp->base = (char*)malloc(bufsize)) == NULL) return EOF;
+  } else {
+    // Write buffer to file
+    unsigned n = fp->ptr - fp->base;
+
+    if (write(fp->fd, fp->base, n) != n) {
+      // Couldn't write buffer to file
+      fp->flags._ERR = 1;
+
+      return EOF;
+    }
+  }
+
+  // Reset pointer and count
+  fp->ptr = fp->base;
+  fp->cnt = bufsize - 1;
+  *fp->ptr++ = (char) c;
+
+  return c;
+}
+
+int flushfile(FILE* fp) {
+  int res = 0;
+  // Handle invalid file pointer
+  if (fp < _iob || fp >= _iob + OPEN_MAX) return EOF;
+  // Handle invalid file mode
+  if (fp->flags._WRITE == 0 | fp->flags._ERR == 1) return EOF;
+
+  // Flush buffer
+  res = _flushbuffer(0, fp);
+
+  // Reset pointer and count
+  fp->ptr = fp->base;
+  fp->cnt = (fp->flags._UNBUF) ? 1 : BUFSIZ;
+
+  return res;
+}
+
+int closefile(FILE* fp) {
+  int res;
+
+  if ((res = flushfile(fp)) != EOF) {
+    // Free space allocated for buffer
+    free(fp->base);
+
+    // Reset file information and buffer
+    fp->base = NULL;
+    fp->ptr = NULL;
+    fp->cnt = 0;
+
+    // Reset flags
+    fp->flags._READ = 0;
+    fp->flags._WRITE = 0;
+    fp->flags._UNBUF = 0;
+    fp->flags._EOF = 0;
+    fp->flags._ERR = 0;
+  }
+
+  return res;
 }
